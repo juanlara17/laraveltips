@@ -14,10 +14,18 @@ class Controller extends BaseController
 
     public function index()
     {
-        $user = User::find([1,3,5],['name','email']);
-        dd($user);
-//        $users = User::get();
+//        $users = User::find([1,3,5],['name','email']);
+//        dd($user);
+        $users = User::get();
 
         return view('dashboard', compact('users'));
+    }
+
+    public function users()
+    {
+        $users = User::get();
+
+        return view('user.index', compact('users'));
+
     }
 }

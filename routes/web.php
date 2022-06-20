@@ -27,4 +27,8 @@ Route::post('/post', [PostController::class, 'store'])->name('post.store');
 
 Route::get('/posts', [PostController::class, 'index'])->name('posts');
 
+Route::get('/users', [PostController::class, 'users'])->name('users');
+
+
+
 require __DIR__.'/auth.php';
