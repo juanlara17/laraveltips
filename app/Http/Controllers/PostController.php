@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\PostRequest;
 use App\Models\Post;
 use Illuminate\Http\Request;
 
@@ -13,7 +14,7 @@ class PostController extends Controller
         return view('post.index', compact('posts'));
     }
 
-    public function store(Request $request)
+    public function store(PostRequest $request)
     {
 //        dd($request->all());
         $post = new Post();
