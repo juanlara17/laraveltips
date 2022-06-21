@@ -29,6 +29,6 @@ Route::get('/posts', [PostController::class, 'index'])->name('posts');
 
 Route::get('/users', [PostController::class, 'users'])->name('users');
 
-
+//Route::resource('user', Controller::class);
 
 require __DIR__.'/auth.php';

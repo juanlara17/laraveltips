@@ -23,6 +23,9 @@
                                 <th scope="col" class="px-6 py-3">
                                     Email
                                 </th>
+                                <th scope="col" class="px-6 py-3">
+                                    Create At
+                                </th>
                             </tr>
                             </thead>
                             <tbody>
@@ -36,6 +39,9 @@
                                     </td>
                                     <td class="px-6 py-4">
                                         {{ $user->email }}
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        {{ $user->created_at }}
                                     </td>
                                 </tr>
                             @endforeach
