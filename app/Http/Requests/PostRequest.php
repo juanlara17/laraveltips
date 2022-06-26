@@ -31,7 +31,7 @@ class PostRequest extends FormRequest
     public function prepareForValidation()
     {
         $this->merge([
-            'name' => strtoupper($this->name)
+            'name' => strtoupper($this->name),
         ]);
     }
 }

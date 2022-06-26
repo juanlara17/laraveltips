@@ -21,7 +21,7 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', [Controller::class, 'index'])
-    ->middleware('auth')
+//    ->middleware('auth')
     ->name('dashboard');
 Route::post('/post', [PostController::class, 'store'])->name('post.store');
 

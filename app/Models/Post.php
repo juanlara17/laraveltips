@@ -12,7 +12,7 @@ class Post extends Model
     public function user()
     {
         return $this->belongsTo(User::class, 'user_id')->withDefault([
-            'name' => 'Anonimo'
+            'name' => 'Anonimo',
         ]);
     }
 }

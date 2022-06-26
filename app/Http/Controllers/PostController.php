@@ -4,13 +4,19 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\PostRequest;
 use App\Models\Post;
-use Illuminate\Http\Request;
+use App\Models\User;
 
 class PostController extends Controller
 {
     public function index()
     {
-        $posts = Post::get();
+//        $user = User::find(2);
+//        $posts = Post::where('user_id', $user->id)->get();
+//        $posts = Post::get();
+        $users = User::where('phone', 1)->get();
+//        dd($users);
+        $posts = Post::whereBelongsTo($users)->get();
+
         return view('post.index', compact('posts'));
     }
 
