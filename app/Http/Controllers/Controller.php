@@ -17,13 +17,15 @@ class Controller extends BaseController
 //        $users = User::find([1,3,5],['name','email']);
 //        dd($user);
         $users = User::get();
+//        dd($users);
 
         return view('dashboard', compact('users'));
     }
 
     public function users()
     {
-        $users = User::paginate(3);
+        $users = User::first();
+        dd($users->toArray());
 //        $users = User::whereDate('created_at', '>=', now()->subMonth(6))->get();
 //        $users = User::whereBetween('created_at', [now()->subDays(90) , today()])->get();
 //        $users = User::whereMonth('created_at', now()->month(8))->get();
