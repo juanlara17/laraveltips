@@ -24,8 +24,8 @@ class Controller extends BaseController
 
     public function users()
     {
-        $users = User::first();
-        dd($users->toArray());
+        $users = User::paginate(5);
+//        dd($users->toArray());
 //        $users = User::whereDate('created_at', '>=', now()->subMonth(6))->get();
 //        $users = User::whereBetween('created_at', [now()->subDays(90) , today()])->get();
 //        $users = User::whereMonth('created_at', now()->month(8))->get();

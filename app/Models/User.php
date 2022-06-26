@@ -37,8 +37,16 @@ class User extends Authenticatable
      *
      * @var array<string, string>
      */
-    /*protected $casts = [
+    protected $casts = [
         'email_verified_at' => 'datetime:d-m-y h:m:s',
         'phone' => 'boolean',
-    ];*/
+    ];
+
+    public function getStatusAttribute($value)
+    {
+        return [
+            '1' => 'Activo',
+            '0' => 'Inactivo'
+        ][$value];
+    }
 }

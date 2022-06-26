@@ -24,7 +24,7 @@
                                     Email
                                 </th>
                                 <th scope="col" class="px-6 py-3">
-                                    Create At
+                                    Status
                                 </th>
                             </tr>
                             </thead>
@@ -41,7 +41,7 @@
                                         {{ $user->email }}
                                     </td>
                                     <td class="px-6 py-4">
-                                        {{ $user->created_at }}
+                                        {{ $user->status }}
                                     </td>
                                 </tr>
                             @endforeach

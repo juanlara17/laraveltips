@@ -28,6 +28,7 @@ class UserFactory extends Factory
             'remember_token' => Str::random(10),
             'profile_image' => $faker->imageUrl(50, 50),
             'created_at' => $faker->dateTimeBetween('-1 years'),
+            'status' => $this->faker->randomElement([1, 0])
         ];
     }
 
