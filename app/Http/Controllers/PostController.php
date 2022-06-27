@@ -17,8 +17,12 @@ class PostController extends Controller
 //        dd($users);
 //        $posts = Post::whereBelongsTo($users)->get();
 
-        return view('post.index', compact('posts'));
+//        return view('post.index', compact('posts'));
+
+        return view('post.index')
+            ->withPosts($posts);
     }
+
 
     public function store(PostRequest $request)
     {
