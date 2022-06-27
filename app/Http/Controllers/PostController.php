@@ -12,10 +12,10 @@ class PostController extends Controller
     {
 //        $user = User::find(2);
 //        $posts = Post::where('user_id', $user->id)->get();
-//        $posts = Post::get();
-        $users = User::where('phone', 1)->get();
+        $posts = Post::get();
+//        $users = User::where('phone', 1)->get();
 //        dd($users);
-        $posts = Post::whereBelongsTo($users)->get();
+//        $posts = Post::whereBelongsTo($users)->get();
 
         return view('post.index', compact('posts'));
     }
